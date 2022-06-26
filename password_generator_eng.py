@@ -11,7 +11,7 @@ lowercase_letters = 'abcdefghijklmnopqrstuvwxyz'
 uppercase_letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 punctuation = '!#$%&*+-=?@^_'
 
-chars = ''
+chars = ''                                                                                        #in this variable we add the necessary symbols
 
 number_of_passwords = int(input('Enter the number of passwords to generate --> '))
 length = int(input('Enter length of passwords --> '))
@@ -33,7 +33,7 @@ if need_punctuation.lower() == 'yes':
     chars += punctuation
 
 need_no_simbols = input('Exclude the ambiguous symbols "il1Lo0O"? yes/no --> ')
-if need_no_simbols.lower() == 'yes':
+if need_no_simbols.lower() == 'yes':                                                               #delete these symbols
     need_no_simbols = need_no_simbols.replace('i', '')
     need_no_simbols = need_no_simbols.replace('l', '')
     need_no_simbols = need_no_simbols.replace('1', '')
@@ -44,7 +44,7 @@ if need_no_simbols.lower() == 'yes':
 
 print()
 
-chars = list(chars)
+chars = list(chars)                                                                                #convert string variable to list
 
 
 def generate_password(length, chars):
